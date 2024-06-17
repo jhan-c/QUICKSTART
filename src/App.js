@@ -1,25 +1,44 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import GLightbox from 'glightbox';
+import Header from './Header';
+import HeroSection from './HeroSection';
+import FeaturedServices from './FeaturedServices';
+import About from './About';
+import Clients from './Clients';
+import Features from './Features';
+import FeaturesDetails from './FeaturesDetails';
+import Services from './Services';
+import Footer from './Footer';
+import SwiperComponent from './SwiperComponent'; // Adjust the path as per your project structure
 import './App.css';
 
-function App() {
+
+const App = () => {
+  useEffect(() => {
+    AOS.init();
+    GLightbox();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <HeroSection />
+      <FeaturedServices />
+      <About />
+      <Clients />
+      <Features />
+      <FeaturesDetails />
+      <Services />
+      <Footer />
+      <div className="App">
+      <h1>My Swiper Component</h1>
+      <SwiperComponent />
+      </div>
+    </>
   );
-}
+
+    
+};
 
 export default App;
