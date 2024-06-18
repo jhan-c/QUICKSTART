@@ -11,9 +11,9 @@ import AOS from 'aos';
 import GLightbox from 'glightbox';
 import Swiper from 'swiper';
 
-AOS.init();
-GLightbox();
-Swiper();
+new AOS.init();
+new GLightbox();
+new Swiper();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
